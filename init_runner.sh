@@ -10,7 +10,7 @@ curl -LJO "https://s3.dualstack.us-east-1.amazonaws.com/gitlab-runner-downloads/
 
 dpkg -i "gitlab-runner-helper-images.deb" "gitlab-runner_${arch}.deb"
 
-sudo gitlab-runner register --non-interactive --url "${url}" --token "${token}" --executor "${executor}" --docker-image: "alpine:latest"
+sudo gitlab-runner register --non-interactive --url "${url}" --token "${token}" --executor "${executor}" --docker-image "alpine:latest"
 
 sudo gitlab-runner status > status.txt
 sudo gitlab-runner run
