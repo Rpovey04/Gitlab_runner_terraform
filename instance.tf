@@ -21,5 +21,5 @@ resource "aws_instance" "server" {
     Name = "${var.gitlab_runner_url}_runner_instance"
   }
   # arch hard coded in since only the ubuntu ami is provided in this file
-  user_data = templatefile("${path.module}/init_runner.sh", { arch = "amd64", url = var.gitlab_runner_url, token = var.gitlab_runner_token})
+  user_data = templatefile("${path.module}/init_runner.sh", { arch = "amd64", url = var.gitlab_runner_url, token = var.gitlab_runner_token, executor = var.gitlab_runner_executor})
 }
