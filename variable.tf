@@ -17,5 +17,5 @@ variable "ssh_key_name" {
 variable "gitlab_runner_executor" {
   type = string
   description = "Executor used by the runner"
-  default = "shell"
+  default = "docker"
 }
