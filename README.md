@@ -8,3 +8,5 @@ Need to define the following variables:
 The following can be optionally defined:
 
 - ssh_key_name: Name of the SSH key associated with the newly created runner (must be in the same aws account where the instances are being deployed). Leaving blank will result in no key being associated
+
+Recommended to define variables (especially tokens) in a persistent tfvars file to allow for the destruction of runners later
